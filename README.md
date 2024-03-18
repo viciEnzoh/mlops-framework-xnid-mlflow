@@ -42,7 +42,7 @@ To arrange a batch of experiments, one needs to manipulate and compile a specifi
     "num-folds": number_of_folds
   },
   "preprocess": {
-    "tasks": "bMD", "mMD" or "AD",
+    "task": "bMD", "mMD" or "AD",
     "samples-barrier": min_class_samples
   },
   "train": {
