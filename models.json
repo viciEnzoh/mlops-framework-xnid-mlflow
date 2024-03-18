@@ -1,0 +1,214 @@
+{
+    "algorithm": {
+
+        "decision-tree" : {
+            "hyper-parameters" : {
+                "criterion" : "gini",
+                "splitter" : "best",
+                "max_depth" : null,
+                "min_samples_split" : 2,
+                "min_samples_leaf" : 1,
+                "min_weight_fraction_leaf" : 0,
+                "max_features" : null,
+                "max_leaf_nodes" : null
+            },            
+            "learning": "supervised",
+            "extended_name": "Decision Tree"
+        },
+
+        "random-forest" : {
+            "hyper-parameters" : {
+                "n_estimators" : 100,
+                "criterion" : "gini",
+                "max_depth" : null,
+                "min_samples_split" : 2,
+                "min_samples_leaf" : 1,
+                "min_weight_fraction_leaf" : 0,
+                "max_features" : "sqrt",
+                "max_leaf_nodes" : null,
+                "n_jobs" : null
+            },            
+            "learning": "supervised",
+            "extended_name": "Random Forest"
+        },
+
+        "xg-boost" : {
+            "hyper-parameters" : {
+                "n_estimators" : 100,
+                "max_depth" : null,
+                "learning_rate" : null,
+                "min_child_weight" : null,
+                "gamma" : null,
+                "subsample" : null,
+                "colsample_bytree" : null,
+                "reg_alpha" : null
+            },            
+            "learning": "supervised",
+            "extended_name": "XG-Boost"
+        },
+
+        "mlp" : {
+            "hyper-parameters" : {
+                "epochs" : 5,
+                "batch_size" : 128,
+                "red_fact" : [1.5, 1.5],
+                "loss" : "mse",
+                "optimizer" : "adam"
+            },            
+            "learning": "supervised",
+            "extended_name": "Multi-Layer Perceptron"
+    },
+
+        "rapp" : {
+            "hyper-parameters" : {
+                "red_fact" : [0.75, 0.5],
+                "rapp_mode" : "e_rmse",
+                "epochs" : 100,
+                "optimizer" : "adam",
+                "loss" : "mse"
+            },
+            "learning": "unsupervised",
+            "extended_name": "Reconstuctor along Projection Pathway (RaPP)"
+        },
+
+        "alad" : {
+            "hyper-parameters" : {
+                "contamination" : 0.1,
+                "optimizer" : "adam",
+                "loss" : "mse"
+            },
+            "learning": "unsupervised",
+            "extended_name": "Adversarially Learned Anomaly Detection (ALAD)"
+        },
+
+        "anogan" : {
+            "hyper-parameters" : {
+                "contamination" : 0.1,
+                "optimizer" : "adam",
+                "loss" : "mse"
+            },
+            "learning": "unsupervised",
+            "extended_name": "Unsupervised Anomaly Detection with Generative Adversarial Networks (AnoGAN)"
+        },
+
+        "betavae" : {
+            "hyper-parameters" : {
+                "contamination" : 0.1,
+                "gamma" : 1.0,
+                "capacity" : 0.0,
+                "epochs" : 10,
+                "optimizer" : "adam",
+                "loss" : "mse"
+            },
+            "learning": "unsupervised",
+            "extended_name": "Auto-Encoding Variational Bayes (beta-VAE)"
+        }
+    ,
+
+        "ecod" : {
+            "hyper-parameters" : {
+                "contamination" : 0.1,
+                "optimizer" : "adam",
+                "loss" : "mse"
+            },
+            "learning": "unsupervised",
+            "extended_name": "Empirical Cumulative (function) Outlier Detection (ECOD)"
+        },
+
+        "iforest": {
+            "hyper-parameters" : {
+                "n_estimators" : 100,
+                "max_samples" : "auto",
+                "contamination" : 0.1,
+                "optimizer" : "adam",
+                "loss" : "mse"
+            },
+            "learning": "unsupervised",
+            "extended_name": "Isolation Forest"
+        },
+
+        "kitnet" : {
+            "hyper-parameters" : {
+                "red_fact" : [0.5],
+                "k" : 5,
+                "train_distance" : "normal",
+                "equalize_ensemble" : false,
+                "normalize_ensemble" : false,
+                "epochs" : 100
+            },
+            "learning": "unsupervised",
+            "extended_name": "KitNET"
+        },
+
+        "lof" : {
+            "hyper-parameters" : {
+                "novelty" : true,
+                "optimizer" : "adam",
+                "loss" : "mse"
+            },
+            "learning": "unsupervised",
+            "extended_name": "Local Outlier Factor"
+        },
+
+        "ocsvm" : {
+            "hyper-parameters" : {
+                "kernel": "rbf",
+                "gamma": "auto",
+                "optimizer": "adam",
+                "loss": "mse"
+            },
+            "learning": "unsupervised",
+            "extended_name": "One Class SVM"
+        },
+
+        "rod" : {
+            "hyper-parameters" : {
+                "contamination" : 0.1,
+                "optimizer" : "adam",
+                "loss" : "mse"
+            },
+            "learning": "unsupervised",
+            "extended_name": "Rotation-based Outlier Detection (ROD)"
+        },
+
+        "suod" : {
+            "hyper-parameters" : {
+                "contamination" : 0.1,
+                "optimizer" : "adam",
+                "loss" : "mse"
+            },
+            "learning": "unsupervised",
+            "extended_name": "Scalable Unsupervised Outlier Detection (SUOD)"
+        },
+
+        "vae" : {
+            "hyper-parameters" : {
+                "contamination" : 0.1,
+                "gamma" : 1.0,
+                "capacity" : 0.0,
+                "epochs" : 10,
+                "optimizer" : "adam",
+                "loss" : "mse"
+            },
+            "learning": "unsupervised"
+        }
+    },
+
+    "eval_list": [
+        "n_estimators",
+        "max_depth",
+        "min_samples_split",
+        "min_samples_leaf",
+        "max_leaf_nodes",
+        "min_weight_fraction_leaf",
+        "n_jobs",
+        "learning_rate",
+        "subsample",
+        "epochs",
+        "batch_size",
+        "novelty",
+        "contamination",
+        "red_fact"
+        ]
+
+}

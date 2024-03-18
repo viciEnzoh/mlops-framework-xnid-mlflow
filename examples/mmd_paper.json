@@ -1,0 +1,39 @@
+{
+    "general-parameters": {
+      "exp-name": "mmd_optimization",
+      "tracking-uri": "http://localhost:5000",
+      "random-state": "range(130,133)"
+    },
+
+    "ingest": {
+      "dataset-list": ["NSL-KDD"]
+    },
+
+    "split": {
+      "split-portion": [0.7, 0.3],
+      "k-fold": false,
+      "num-folds": 10
+    },
+
+    "preprocess": {
+      "tasks": "mMD",
+      "samples-barrier": 300
+    },
+
+    "train": {
+      "algorithms": {
+
+        "random-forest": {
+            "n_estimators": [75, 100, 125],
+            "max_depth": [80, 160, null],
+            "max_leaf_nodes": [6, 12, 18, null]
+        }
+
+      }
+    },
+
+    "evaluate": {
+      "thresholds": {},
+      "explain": false
+    }
+  }

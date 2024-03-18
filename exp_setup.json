@@ -1,0 +1,37 @@
+{
+  "general-parameters": {
+    "exp-name": "ad_optimization",
+    "tracking-uri": "http://localhost:5000",
+    "random-state": "range(130,133)"
+  },
+
+  "ingest": {
+    "dataset-list": ["NSL-KDD"]
+  },
+
+  "split": {
+    "split-portion": [0.7, 0.3],
+    "k-fold": false,
+    "num-folds": 10
+  },
+
+  "preprocess": {
+    "task": "AD",
+    "samples-barrier": 300
+  },
+
+  "train": {
+    "algorithms": {
+
+      "alad": {
+        "contamination": [0.1, 0.3]
+      }
+
+    }
+  },
+
+  "evaluate": {
+    "thresholds": {},
+    "explain": false
+  }
+}

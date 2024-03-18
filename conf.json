@@ -1,0 +1,28 @@
+{
+    "available_datasets" :
+    {
+        "NSL-KDD": 
+        {
+            "labels": ["subtype", "type"],
+            "benign_label": "normal"
+        },
+
+        "Kitsune": 
+        {
+            "labels": ["LABEL"],
+            "benign_label": "BENIGN"
+        },
+
+        "TON-IoT": 
+        {
+            "labels": ["LABEL"],
+            "benign_label": "benign"
+        },
+
+        "IoT-23": 
+        {
+            "labels": ["LABEL"],
+            "benign_label": "benign"
+        }
+    }
+}
