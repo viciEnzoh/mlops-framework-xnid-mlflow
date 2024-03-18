@@ -39,11 +39,10 @@ To arrange a batch of experiments, one needs to manipulate and compile a specifi
   "split": {
     "split-portion": [train_ratio, val_ratio],
     "k-fold": true/false,
-    "num-fold": number_of_folds,
-    "target-fold": target_fold_number
+    "num-folds": number_of_folds
   },
   "preprocess": {
-    "tasks": ["bMD", "mMD", "AD"],
+    "tasks": "bMD", "mMD" or "AD",
     "samples-barrier": min_class_samples
   },
   "train": {
