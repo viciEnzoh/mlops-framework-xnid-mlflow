@@ -35,6 +35,7 @@ def main(argv):
             print("[ERROR] A data set was not found in the list of the available ones")
             return
 
+    if(not 'exp_reports' in os.listdir()): os.mkdir('exp_reports')
     if(not exp_name in os.listdir('exp_reports')): os.mkdir('exp_reports/' + exp_name)
 
     #From "task" field of JSON config file we infer:
