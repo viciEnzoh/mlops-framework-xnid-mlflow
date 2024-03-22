@@ -16,7 +16,7 @@
     },
 
     "preprocess": {
-      "tasks": "bMD",
+      "task": "bMD",
       "samples-barrier": 300
     },
 
