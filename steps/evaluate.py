@@ -55,13 +55,13 @@ def evaluate(model, Xtest, ytest, algorithm=None, no_dup=0, binarize_labels=1, e
 
         if(explain):            
             print("[DEBUG] Calculating the SHAP values...")
-            # index = np.arange(len(Xtrain))
-            # index = np.random.choice(index, size=250, replace=False)
-            # Xshap = np.array(Xtrain)[index]
-            # explainer = shap.Explainer(model.model, masker=Xshap, njobs=20, approximate=True) #shap.sample(np.array(Xtrain), nsamples=500, random_state=random_state)
-            explainer = shap.Explainer(model.model, masker=shap.sample(np.array(Xtrain), nsamples=500, random_state=random_state), njobs=20, approximate=True)
-            shap_values = explainer.shap_values(np.array(Xtest))
-            shap.summary_plot(shap_values, np.array(Xtest), feature_names=features, max_display=10, plot_size=(16,9))
+            index = np.arange(len(Xtrain))
+            index = np.random.choice(index, size=250, replace=False)
+            Xshap = np.array(Xtrain)[index]
+            explainer = shap.Explainer(model.model, masker=Xshap, njobs=20, approximate=True) #shap.sample(np.array(Xtrain), nsamples=500, random_state=random_state)
+            # explainer = shap.Explainer(model.model, masker=shap.sample(np.array(Xtrain), nsamples=500, random_state=random_state), njobs=20, approximate=True)
+            shap_values = explainer.shap_values(np.array(Xshap))
+            shap.summary_plot(shap_values, np.array(Xtest), feature_names=features, max_display=10, plot_size=(16,9), show=False)
 
             handle, labels = plt.gca().get_legend_handles_labels()
             converted_labels = le.inverse_transform(model.model.classes_)
