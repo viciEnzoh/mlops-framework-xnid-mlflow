@@ -152,7 +152,7 @@ def main(argv):
     filename = 'exp_reports/' + exp_name + '/' + exp_name + ".csv"
     runs_df = pd.DataFrame(runs)
     runs_df.to_csv(filename, index=False)
-    print("[DEBUG] Producing CSV file for the exp. batch summary: " + filename + ".csv")
+    print("[DEBUG] Producing CSV file for the exp. batch summary: " + filename)
     get_artifact_size(filename)
 
     os.remove(filename)

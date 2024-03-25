@@ -1,9 +1,15 @@
 from xgboost import XGBClassifier
+from sklearn.preprocessing import LabelEncoder
+
+import numpy as np
 
 from .classifier import *
 
 
 def xgb(**kwargs):
+
+    le = LabelEncoder()
+
     class XGB(Classifier):
         def __init__(self,
                     n_estimators=100,
@@ -35,6 +41,7 @@ def xgb(**kwargs):
             #we have to encode y in order to fit properly the xgb classifier...
             # ... and after we have done that, we have to reset the original encoding
             #so, xgboost has to EMPLOY someway the INTERNAL LABEL ENCODER...
+            if(len(np.unique(y)) > 2): y=le.fit_transform(y)
             self.model.fit(X, y)
 
         def predict(self, X, **kwargs):
