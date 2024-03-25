@@ -9,6 +9,7 @@ from run_pipeline import run_pipeline
 import hashlib
 import pandas as pd
 from loggers.plot import plot_avg_roc
+from get_artifacts_size import get_artifact_size
 
 #MAIN
 def main(argv):
@@ -151,8 +152,9 @@ def main(argv):
     filename = 'exp_reports/' + exp_name + '/' + exp_name + ".csv"
     runs_df = pd.DataFrame(runs)
     runs_df.to_csv(filename, index=False)
-    print("[DEBUG] Executing command: python3 get_artifacts_size.py " + filename)       #
-    os.system("python3 get_artifacts_size.py " + filename)
+    print("[DEBUG] Producing CSV file for the exp. batch summary: " + filename + ".csv")
+    get_artifact_size(filename)
+
     os.remove(filename)
     
 

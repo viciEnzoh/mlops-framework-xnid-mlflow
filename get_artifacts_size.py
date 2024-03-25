@@ -2,12 +2,12 @@ import os
 import sys
 import pandas as pd
 
-def main(argv):
+def get_artifact_size(exp_filename):
 
     #argv[1]: CSV filename to process
 
     #Read CSV file with experiment table
-    exp_filename = argv[1]
+    #exp_filename = argv[1]
     df = pd.read_csv(exp_filename)
     experiment_id = df.at[0, 'experiment_id']
     folder = "../mlartifacts/" + str(experiment_id)
@@ -41,6 +41,3 @@ def main(argv):
     #Saving CSV file
     new_csv_name = exp_filename.split('.')[0] + '_size.csv'
     df.to_csv(new_csv_name, index=False, na_rep=None)
-
-if __name__ == '__main__':
-    main(sys.argv)
