@@ -81,7 +81,21 @@ There is also a subset of fields which are common across steps (viz. **"exp-name
 
 ### Start the experimental campaign
 
-Once you have set all the configuration parameters, you have to run the script via console:
+Before starting, make sure you have installed all dependencies on the Python interpreter. To do this, run the command:
+
+```
+pip install -r "requirements.txt"
+```
+
+Launch a terminal **from the folder where the project folder is located**, then launch the tracking server using the command:
+
+```
+mlflow ui
+```
+
+This will start a server listening on port 5000. To access the GUI, simply type 'http://localhost:5000' in your browser.
+
+Next, you simply need to properly compile the **exp_setup.json** file to organize the batch of experimental runs you intend to start.. Once you have set all the configuration parameters, you have to run the script via console:
 
 ```
 python3 main_exps.py
