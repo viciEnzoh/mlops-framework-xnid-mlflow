@@ -81,22 +81,34 @@ There is also a subset of fields which are common across steps (viz. **"exp-name
 
 ### Start the experimental campaign
 
-Firstly, launch a terminal **from the folder where the project folder is located**, then start the execution of the tracking server using the command:
+Firstly, launch a terminal **from the folder where the project folder is located**.
+
+Make sure you have installed all dependencies on the Python interpreter. To do this, run the command:
+
+```
+pip install -r "mlops-framework-xnid-mlflow/requirements.txt"
+```
+
+Then, start the execution of the tracking server using the command:
 
 ```
 mlflow ui
 ```
 
-Now, move into the project folder. Make sure you have installed all dependencies on the Python interpreter. To do this, run the command:
-
-```
-pip install -r "requirements.txt"
-```
-
 This will start a server listening on port 5000. To access the GUI, simply type 'http://localhost:5000' in your browser.
 
-Next, you simply need to properly compile the **exp_setup.json** file to organize the batch of experimental runs you intend to start.. Once you have set all the configuration parameters, you have to run the script via console:
+Now, move into the project folder.
+
+```
+cd mlops-framework-xnid-mlflow
+```
+
+Finally, you simply need to properly compile the **exp_setup.json** file to organize the batch of experimental runs you intend to start. Once you have set all the configuration parameters, you have to run the script via console:
 
 ```
 python3 main_exps.py
 ```
+
+NB: pay attention to the **keyword** that instantiates the **Python interpreter** to run the script for the experimental batch, as this may vary depending on the system used to run the experiment.
+
+Within the **exp_reports/** directory, you will also find aggregated results available at the end of a session.
