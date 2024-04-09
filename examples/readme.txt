@@ -7,6 +7,5 @@ You can examine the results using the MLflow GUI. To achieve this, you can visua
 
 EXAMPLES
 > 'ad_alad_paper.json': optimization of ALAD model for anomaly detection task, as reported in the paper
-> 'ad_iforest_paper.json': optimization of Isolation Forest model for anomaly detection task, as reported in the paper
 > 'bmd_paper.json': optimization of XGBoost model for binary misuse detection task, as reported in the paper
 > 'mmd_paper.json': optimization of Random Forest model for multiclass misuse detection task, as reported in the paper
