@@ -1,7 +1,7 @@
 USAGE GUIDELINES
 First, you can choose the desired JSON file to reproduce the example, and then copy/paste its content to replace the contents of 'exp_setup.json' in the up folder.
 Next, you need to launch the script via the console: 'python3 main_exps.py'
-Remember to start from the 'intrusion-detection/' folder.
+Remember to start from the 'mlops-framework-xnid-mlflow/' folder.
 You can examine the results using the MLflow GUI. To achieve this, you can visualize it in a browser by entering '<tracking_server_ip>:5000'.
 
 
