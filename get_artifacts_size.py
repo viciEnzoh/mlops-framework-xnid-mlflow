@@ -5,7 +5,6 @@ import pandas as pd
 def get_artifact_size(exp_filename):
 
     #Read CSV file with experiment table
-    #exp_filename = argv[1]
     df = pd.read_csv(exp_filename)
     experiment_id = df.at[0, 'experiment_id']
     folder = "../mlartifacts/" + str(experiment_id)
