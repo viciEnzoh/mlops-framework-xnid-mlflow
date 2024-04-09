@@ -4,8 +4,6 @@ import pandas as pd
 
 def get_artifact_size(exp_filename):
 
-    #argv[1]: CSV filename to process
-
     #Read CSV file with experiment table
     #exp_filename = argv[1]
     df = pd.read_csv(exp_filename)
