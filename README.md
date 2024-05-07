@@ -112,3 +112,7 @@ python3 main_exps.py
 NB: pay attention to the **keyword** that instantiates the **Python interpreter** to run the script for the experimental batch, as this may vary depending on the system used to run the experiment.
 
 Within the **exp_reports/** directory, you will also find aggregated results available at the end of a session.
+
+## License
+
+This work is licensed under the [GNU GPL v3.0](https://github.com/viciEnzoh/mlops-framework-xnid-mlflow/blob/main/LICENSE.txt) license.
